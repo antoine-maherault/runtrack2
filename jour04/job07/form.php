@@ -9,11 +9,13 @@
 
 // Toît 
 
-    // TIP //    
-for($i = 1 ; $i<$_GET["width"];$i++){
+    // TIP //  
+$tip = $_GET["width"] / 20;
+for($i = $tip ; $i<$_GET["width"];$i++){
     echo '&nbsp';
 }
 echo '/\ <br/>';
+
     //__ //  
 
 $stabliser = $_GET["width"] / 2;
