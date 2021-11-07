@@ -8,25 +8,30 @@
 
 
 // Toît 
+if(($_GET["width"]%3 == 0) || ($_GET["height"]%3==0)){
+    $var_center = $_GET["width"]-3; // $_GET["width"]-2
+    $inc = ($_GET["width"] / $_GET["height"])*1; // ($_GET["width"] / $_GET["height"]) 
+}
+elseif (($_GET["width"]%2 == 1) || ($_GET["height"]%2==1)){
+    $var_center = $_GET["width"]-3; // $_GET["width"]-2
+    $inc = ($_GET["width"] / $_GET["height"])*1; // ($_GET["width"] / $_GET["height"])
+}
 
-    // TIP //  
-// $tip = 2 ; // 2 FOR 10x5
-// for($i = $tip ; $i<($_GET["width"]);$i++){
-//     echo '&nbsp';
-// }
-// echo '/\ <br/>';
+else{
+    $var_center = $_GET["width"]-2; // $_GET["width"]-2
+    $inc = ($_GET["width"] / $_GET["height"]); // ($_GET["width"] / $_GET["height"])5
+}
+$length =0; // 0
 
-    //__ //  
-
-$stabliser = $_GET["width"] / 2; // 2 FOR 10x5
-$var_center = $_GET["width"]-2; // -4 FOR 10x5 -6 _ FOR 20x5 _ -8 FOR 30x5 _ -10 FOR 40x5
-$var_length =  $_GET["width"] -2 ; // -5 FOR 10x5 _ -10 FOR 20*10 _-20 FOR 40$20
-$inc = $_GET["width"] / $_GET["height"]; // 2 FOR 10x5 _ 6 FOR 20x5 _ 9 FOR 30x5
-$length = 0;
     // TOP //   
 
-
 for($u = 1 ; $u<$_GET["height"];$u++){   
+    if (($_GET["width"]%2 == 1) || ($_GET["height"]%2 == 1) || ($_GET["width"]%3 == 1) || ($_GET["height"]%3 == 0)){
+        if ($var_center == ($_GET["width"]-2) || ($var_center == ($_GET["width"]-3))){
+            echo "&nbsp";
+        }
+    }
+    
     
     // space //
         for($i = 0 ; $i<$var_center ;$i++){
@@ -41,11 +46,10 @@ for($u = 1 ; $u<$_GET["height"];$u++){
 
         // compteurs //
         $var_center = $var_center - $inc;
-        $var_length =  $var_length  + $inc;
+        // $var_length =  $var_length  + $inc;
         $length = $length + $inc;
   
     }
-
     //__ //    
    
   
