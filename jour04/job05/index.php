@@ -4,14 +4,15 @@
   <title>Hello World PHP</title>
  </head>
  <body>
+<?php 
 
-<form action="/runtrack2/jour04/job05/form.php" method="post">
-  <label for="username">username</label><br>
-  <input type="text" name="username" ><br>
-  <label for="password">password</label><br>
-  <input type="text" name="password" ><br><br>
-  <input type="submit" value="Submit">
-</form> 
+if($_POST["username"]=="John" && $_POST["password"]=="Rambo"){
+    echo "C'est pas ma guerre";
+}
+else{
+    echo "Votre pire cauchemar";
+}
 
- </body>
+?>
+</body>
 </html>

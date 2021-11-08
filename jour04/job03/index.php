@@ -4,14 +4,16 @@
   <title>Hello World PHP</title>
  </head>
  <body>
+ <?php 
 
-<form action="/runtrack2/jour04/job03/form.php" method="post">
-  <label for="fname">Prénom:</label><br>
-  <input type="text" name="fname" ><br>
-  <label for="lname">Nom:</label><br>
-  <input type="text" name="lname" ><br><br>
-  <input type="submit" value="Submit">
-</form> 
+$count = 0;
 
+foreach($_POST as $value){
+  $count = $count + 1;
+}
+
+echo "Nombre d'arguments POST : ".$count;
+
+?>
  </body>
 </html>

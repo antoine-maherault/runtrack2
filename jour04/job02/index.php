@@ -5,17 +5,30 @@
  </head>
  <body>
 
-<form action="/runtrack2/jour04/job02/form.php" method="get">
-  <label for="fname">Prénom:</label><br>
-  <input type="text" name="fname" ><br>
-  <label for="lname">Nom:</label><br>
-  <input type="text" name="lname" ><br><br>
-  <label for="phone">Téléphone:</label><br>
-  <input type="text" name="phone" ><br>
-  <label for="address">Adresse:</label><br>
-  <input type="text" name="address" ><br><br>
-  <input type="submit" value="Submit">
-</form> 
+<table>   
+  <thead>
+    <th> Arguments </th> 
+    <th> Valeurs </th> 
+  </thead>  
+  <tbody>
+        <tr>
+            <td> Prénom </td>
+            <td> <?php echo $_GET["fname"]; ?> </td>
+        </tr>
+        <tr>
+            <td> Nom </td>
+            <td> <?php echo $_GET["lname"] ?> </td>
+        </tr>
+        <tr>
+            <td> Téléphone </td>
+            <td> <?php echo $_GET["phone"] ?> </td>
+        </tr>
+        <tr>
+            <td> Adresse </td>
+            <td> <?php echo $_GET["address"] ?> </td>
+        </tr>
+    </tbody>  
+</table>
 
- </body>
+</body>
 </html>

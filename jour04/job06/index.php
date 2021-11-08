@@ -4,12 +4,18 @@
   <title>Hello World PHP</title>
  </head>
  <body>
+<?php 
 
-<form action="/runtrack2/jour04/job06/form.php" method="get">
-  <label for="number">nombre</label><br>
-  <input type="text" name="number" ><br>
-  <input type="submit" value="Submit">
-</form> 
+if ($_GET["number"]%2 == 0){
+    echo "Nombre pair";
+}
+else{
+    echo "Nombre impair";
+}
 
- </body>
+
+
+
+?>
+</body>
 </html>
