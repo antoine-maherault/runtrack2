@@ -52,7 +52,18 @@ if (isset($_POST["reset"])){
     $_SESSION['countA1']=0;
     $_SESSION['countA2']=0;
     $_SESSION['countA3']=0;
+    $_SESSION['stopA1']=0;
+    $_SESSION['stopA2']=0;
+    $_SESSION['stopA3']=0;
 }
+
+
+
+// function morpion($button,$bool){
+//     if(!isset($button) && $bool == 0){
+//         echo "<form method = 'post'> <button type='submit' name = 'A1'value='-'> </button> </form>"; 
+//     }
+// }
 
 
 ?>
@@ -67,16 +78,19 @@ if (isset($_POST["reset"])){
         elseif($_SESSION['activeA1']==0){
             $_SESSION['activeA1'] = 1;
             $_SESSION['countA1'] = $_SESSION['count'];
-            // echo     $_SESSION['countA1']; //////////debug
         }
+        echo $_SESSION['count'];
         if($_SESSION['activeA1']==1){
-            if($_SESSION['countA1']%2 == 1 && $_SESSION['activeA1'] = 1){
+
+            if($_SESSION['countA1']%2 == 1){
                 echo "<p>X</p>"; 
-                $_SESSION['count'] ++;
                 }
-            if($_SESSION['countA1']%2 == 0 && $_SESSION['activeA1'] = 1){
+            if($_SESSION['countA1']%2 == 0){
                 echo "<p>O</p>"; 
+            }
+            if($_SESSION['stopA1']==0);{
                 $_SESSION['count'] ++;
+                $_SESSION['stopA1']=1;
             }
         }
         ?>
@@ -89,18 +103,21 @@ if (isset($_POST["reset"])){
     elseif($_SESSION['activeA2']==0){
         $_SESSION['activeA2'] = 1;
         $_SESSION['countA2'] = $_SESSION['count'];
-        // echo     $_SESSION['countA2']; //////////debug
-
     }
+    echo $_SESSION['count'];
     if($_SESSION['activeA2']==1){
-        if($_SESSION['countA2']%2 == 1 && $_SESSION['activeA2'] = 1){
+
+        if($_SESSION['countA2']%2 == 1){
             echo "<p>X</p>"; 
-            $_SESSION['count'] ++;
             }
-        if($_SESSION['countA2']%2 == 0 && $_SESSION['activeA2'] = 1){
+        if($_SESSION['countA2']%2 == 0){
             echo "<p>O</p>"; 
-            $_SESSION['count'] ++;
         }
+        if($_SESSION['stopA2']==0);{
+            $_SESSION['count'] ++;
+            $_SESSION['stopA2']=1;
+        }
+
     }
         ?>
     </td>         
@@ -112,18 +129,22 @@ if (isset($_POST["reset"])){
     elseif($_SESSION['activeA3']==0){
         $_SESSION['activeA3'] = 1;
         $_SESSION['countA3'] = $_SESSION['count'];
-        // echo     $_SESSION['countA3']; //////////debug
-
     }
+    echo $_SESSION['count'];
     if($_SESSION['activeA3']==1){
-        if($_SESSION['countA3']%2 == 1 && $_SESSION['activeA3'] = 1){
+
+        if($_SESSION['countA3']%2 == 1){
             echo "<p>X</p>"; 
-            $_SESSION['count'] ++;
             }
-        if($_SESSION['countA3']%2 == 0 && $_SESSION['activeA3'] = 1){
+        if($_SESSION['countA3']%2 == 0){
             echo "<p>O</p>"; 
-            $_SESSION['count'] ++;
         }
+        if($_SESSION['stopA3']==0);{
+            $_SESSION['count'] ++;
+            $_SESSION['stopA3']=1;
+
+        }
+
     }
         ?>
     </td>      
