@@ -4,6 +4,14 @@
   <title>Hello World PHP</title>
  </head>
  <body>
+
+ <form action="" method="get">
+  <label for="width">largeur</label><br>
+  <input type="text" name="width" ><br>
+  <label for="height">hauteur</label><br>
+  <input type="text" name="height" ><br>
+  <input type="submit" value="Submit">
+</form> 
 <?php 
 
 
@@ -13,10 +21,9 @@ if(($_GET["width"]%3 == 0) || ($_GET["height"]%3==0)){
     $inc = ($_GET["width"] / $_GET["height"])*1; // ($_GET["width"] / $_GET["height"]) 
 }
 elseif (($_GET["width"]%2 == 1) || ($_GET["height"]%2==1)){
-    $var_center = $_GET["width"]-3; // $_GET["width"]-2
+    $var_center = $_GET["width"]-2; // $_GET["width"]-2
     $inc = ($_GET["width"] / $_GET["height"])*1; // ($_GET["width"] / $_GET["height"])
 }
-
 else{
     $var_center = $_GET["width"]-2; // $_GET["width"]-2
     $inc = ($_GET["width"] / $_GET["height"]); // ($_GET["width"] / $_GET["height"])5
@@ -27,7 +34,7 @@ $length =0; // 0
 
 for($u = 1 ; $u<$_GET["height"];$u++){   
     if (($_GET["width"]%2 == 1) || ($_GET["height"]%2 == 1) || ($_GET["width"]%3 == 1) || ($_GET["height"]%3 == 0)){
-        if ($var_center == ($_GET["width"]-2) || ($var_center == ($_GET["width"]-3))){
+        if ($var_center == ($_GET["width"]-3) || ($var_center == ($_GET["width"]-3))){
             echo "&nbsp";
         }
     }
