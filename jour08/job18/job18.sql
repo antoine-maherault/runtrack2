@@ -1,4 +1,2 @@
 
--- Selectionner ensemble des champs de la table etudiants
-
-SELECT nom AS BiggestRoom, id_etage, capacite FROM `salles` HAVING capacite = (SELECT MAX(capacite) FROM `salles`)
+SELECT salles.nom AS BiggestRoom, etage.nom, capacite FROM salles INNER JOIN etage ON etage.id = salles.id_etage HAVING capacite = (SELECT MAX(capacite) FROM `salles`)

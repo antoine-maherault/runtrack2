@@ -1,4 +1,4 @@
 
--- Selectionner ensemble des champs de la table etudiants
 
-SELECT nom, id_etage FROM `salles`
+
+SELECT etage.nom, salles.nom FROM salles INNER JOIN etage ON etage.id = salles.id_etage
