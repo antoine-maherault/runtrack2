@@ -2,6 +2,7 @@
 <html>
  <head>
   <title>PHP jour 6</title>
+  <link rel="stylesheet" href="style1.css">
   <?php
 
 if ($_GET["style"] == "style1"){
