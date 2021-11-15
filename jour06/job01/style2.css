@@ -1,0 +1,23 @@
+body{
+    background-color: rgb(183, 235, 248);
+    display : flex;
+    flex-direction: column;
+    align-items : center;
+    justify-content: center;
+}
+
+form{
+    background-color :grey;
+    width : 200px;
+    height : 200px;
+    display : flex;
+    flex-direction: row;
+    align-items : center;
+    justify-content: center;
+   
+}
+
+select, input{
+    font-size : 15px;
+    font-family: monospace;
+}
