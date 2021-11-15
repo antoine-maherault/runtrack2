@@ -148,6 +148,7 @@ if ($_GET["fonction"] == "plateforme"){
         <option value="plateforme">Plateforme</option>
      </select>
      <input type="submit" value="submit"></submit>
+</form>
  </body>
 </html>
 
