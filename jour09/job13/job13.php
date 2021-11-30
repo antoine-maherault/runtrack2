@@ -13,6 +13,7 @@ $username = "root";
 $password = "root";
 
 // Create connection
+
 $conn = new mysqli($servername, $username, $password, 'jour08');
 
 //          select DATA          //
